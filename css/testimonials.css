@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --moderateViolet: hsl(263, 55%, 52%);
+  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --veryDarkBlackishBlue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --lightGray: hsl(0, 0%, 81%);
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  align-items: center;
+  font-size: 13px;
+  background-color: var(--lightGrayishBlue);
+}
+
+#section {
+  display: grid;
+  grid-template-areas: "a a b e" "c d d e";
+  gap: 20px;
+  margin: 100px 10% 20px 10%;
+}
+
+#Daniel-Clifford {
+  background-color: var(--moderateViolet);
+  grid-area: a;
+  border: none;
+  border-radius: 10px;
+  color: var(--white);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-position: 84% 0;
+  background-repeat: no-repeat;
+  background-size: 103px;
+  width: 40vw;
+  box-shadow: 3px 3px var(--moderateViolet);
+}
+
+#Jonathan-Walters {
+  grid-area: b;
+  background-color: var(--veryDarkGrayishBlue);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  width: 20vw;
+  box-shadow: 3px 3px var(--veryDarkGrayishBlue);
+}
+
+#Jeanette-Harmon {
+  grid-area: c;
+  background-color: var(--white);
+  color: var(--veryDarkGrayishBlue);
+  border: none;
+  border-radius: 10px;
+  width: 20vw;
+}
+
+#Patrick-Abrams {
+  grid-area: d;
+  background-color: var(--veryDarkBlackishBlue);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  width: 40vw;
+  box-shadow: 3px 3px var(--veryDarkBlackishBlue);
+}
+
+#Kira-Whittle {
+  grid-area: e;
+  background-color: var(--white);
+  color: var(--veryDarkBlackishBlue);
+  border: none;
+  border-radius: 10px;
+  width: 20vw;
+}
+
+#head {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin: 20px;
+}
+
+#name {
+  margin: 0 0 0 20px;
+}
+
+#head img {
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+#name h4 {
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+#name p {
+  font-weight: 500;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+#Daniel-Clifford #body h3,
+#Patrick-Abrams #body h3 {
+  font-weight: 600;
+  padding: 0 10px 10px 20px;
+  opacity: 0.9;
+  font-size: 20px;
+}
+
+#Jonathan-Walters #body h3,
+#Kira-Whittle #body h3 {
+  padding: 0 10px 10px 20px;
+  font-weight: 600;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+#Jeanette-Harmon #body h3 {
+  padding: 0 25% 10px 20px;
+  font-weight: 600;
+  opacity: 0.9;
+  font-size: 20px;
+}
+
+#Daniel-Clifford #body p,
+#Patrick-Abrams #body p {
+  font-weight: 500;
+  padding: 10px 25px 20px 20px;
+  opacity: 0.5;
+}
+
+#Jonathan-Walters #body p,
+#Kira-Whittle #body p {
+  padding: 10px 45px 20px 20px;
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+#Jeanette-Harmon #body p {
+  padding: 10px 15% 20px 20px;
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+#Daniel-Clifford #head img {
+  border: 1px solid var(--lightGrayishBlue);
+}
+
+#Patrick-Abrams #head img {
+  border: 2px solid var(--moderateViolet);
+}
+
+#Jonathan-Walters #head img {
+  border: 2px solid var(--veryDarkGrayishBlue);
+}
+
+@media (max-width: 600px) {
+  #section {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 0;
+  }
+
+  #Daniel-Clifford {
+    background-position: 88% 0;
+  }
+
+  #Daniel-Clifford,
+  #Jonathan-Walters,
+  #Jeanette-Harmon,
+  #Patrick-Abrams,
+  #Kira-Whittle {
+    width: 85vw;
+  }
+
+  #Daniel-Clifford #body h3,
+  #Patrick-Abrams #body h3 {
+    padding: 0 33px 10px 25px;
+  }
+
+  #Daniel-Clifford #body p {
+    padding: 10px 46px 30px 25px;
+  }
+
+  #Jonathan-Walters #body h3,
+  #Jeanette-Harmon #body h3,
+  #Kira-Whittle #body h3 {
+    padding: 0 33px 10px 25px;
+  }
+
+  #Jeanette-Harmon #body p{
+    padding: 10px 15% 30px 25px;
+  }
+
+  #Jonathan-Walters #body p {
+    padding: 10px 30px 30px 25px;
+  }
+
+  #Patrick-Abrams #body p {
+    padding: 10px 32px 30px 25px;
+  }
+
+  #Kira-Whittle #body p {
+    padding: 0 33px 30px 25px;
+  }
+}
+
